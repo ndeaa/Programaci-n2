@@ -26,7 +26,7 @@ function buscarProducto($productos, $modelo) {
 function mostrarProductos($productos) {
     $result = '';
     foreach ($productos as $producto) {
-        $result .= "Producto: " . $producto['producto'] . ", Modelo: " . $producto['modelo'] . "<br>" . "C: " . $producto['nombre']. "Valor: " . $producto['precio'];
+        $result .= "Producto encontrado - Nombre: " . $producto['producto'] . ", Cantidad: " . $producto['cantidad'] . ", Valor: " . $producto['precio'] . ", Modelo: " . $producto['modelo'] . "<br>";
     }
     return $result;
 }
