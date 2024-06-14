@@ -34,3 +34,16 @@ function mostrarProductos($productos) {
     }
     return $result;
 }
+
+function actualizarProducto( $productos, $nombre, $cantidad, $valor, $modelo) {
+    foreach ($productos as &$producto) {
+        if ($producto['nombre'] == $nombre) {
+            $producto['cantidad'] = $cantidad;
+            $producto['valor'] = $valor;
+            $producto['modelo'] = $modelo;
+          
+            break;
+        }
+    }
+    return $productos;
+}
