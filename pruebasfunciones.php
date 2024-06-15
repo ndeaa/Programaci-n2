@@ -80,3 +80,14 @@ function calcularValorTotal($productos) {
     }
     return $total;
 }
+
+// Función para filtrar productos por valor
+function filtrarProductosPorValor($productos, $valor) {
+    $filtrados = [];
+    foreach ($productos as $producto) {
+        if ($producto['valor'] > $valor) {
+            $filtrados[] = $producto;
+        }
+    }
+    return $filtrados;
+}
