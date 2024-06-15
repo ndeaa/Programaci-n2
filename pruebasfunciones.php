@@ -1,15 +1,15 @@
 <?php
 session_start();
 
-// Agregar funciones
-function agregarProducto($nombre, $cantidad, $valor, $modelo) {
-    $producto[] = [
-        'nombre' => $nombre,
+// Función para agregar un producto
+function agregarProducto($productos, $nombre, $cantidad, $valor, $modelo) {
+    $productos[] = [
+        'producto' => $nombre,
         'cantidad' => $cantidad,
-        'valor' => $valor,
+        'precio' => $valor,
         'modelo' => $modelo
     ];
-    return $producto;
+    return $productos;
 }
 
 // Función para buscar un producto por modelo
