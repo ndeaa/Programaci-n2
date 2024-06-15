@@ -61,3 +61,14 @@ function calcularValorPromedio($productos) {
     }
 }
 
+// Función para listar todos los modelos disponibles
+function listarModelosDisponibles($productos) {
+    $modelos = [];
+    foreach ($productos as $producto) {
+        if (!in_array($producto['modelo'], $modelos)) {
+            $modelos[] = $producto['modelo'];
+        }
+    }
+    return $modelos;
+}
+
