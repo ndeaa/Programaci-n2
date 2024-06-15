@@ -91,3 +91,16 @@ function filtrarProductosPorValor($productos, $valor) {
     }
     return $filtrados;
 }
+
+// Función para calcular el valor promedio de los productos
+function calcularValorPromedio($productos) {
+    $total = 0;
+    foreach ($productos as $producto) {
+        $total += $producto['valor'];
+    }
+    if (count($productos) > 0) {
+        return $total / count($productos);
+    } else {
+        return 0;
+    }
+}
