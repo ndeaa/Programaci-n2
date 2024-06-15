@@ -16,7 +16,7 @@ function agregarProducto($productos, $nombre, $cantidad, $valor, $modelo) {
 function buscarProducto($productos, $modelo) {
     foreach ($productos as $producto) {
         if ($producto['modelo'] == $modelo) {
-            return "Producto encontrado - Nombre: " . $producto['producto'] . ", Cantidad: " . $producto['cantidad'] . ", Valor: " . $producto['precio'] . ", Modelo: " . $producto['modelo'] . "<br>";
+            return "Nombre: " . $producto['modelo'] . "<br>";
         }
     }
     return "Producto no encontrado.<br>";
@@ -26,7 +26,7 @@ function buscarProducto($productos, $modelo) {
 function mostrarProductos($productos) {
     $result = '';
     foreach ($productos as $producto) {
-        $result .= "Producto encontrado - Nombre: " . $producto['producto'] . ", Cantidad: " . $producto['cantidad'] . ", Valor: " . $producto['precio'] . ", Modelo: " . $producto['modelo'] . "<br>";
+        $result .= "Producto encontrado - Nombre: " . $producto['producto'] . ", Cantidad: " . $producto['cantidad'] . ", valor: " . $producto['precio'] . ", Modelo: " . $producto['modelo'] . "<br>";
     }
     return $result;
 }

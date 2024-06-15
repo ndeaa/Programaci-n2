@@ -8,7 +8,7 @@ if (isset($_SESSION['resultado'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="es">da
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Gestión de Usuarios</title>
@@ -21,8 +21,8 @@ if (isset($_SESSION['resultado'])) {
         <label for="cantidad">Cantidad:</label>
         <input type="number" id="cantidad" name="cantidad"><br>
         
-        <label for="precio">valor:</label>
-        <input type="number" id="precio" name="precio"><br>
+        <label for="precio">Valor:</label>
+        <input type="number" id="valor" name="valor"><br>
 
         <label for="modelo">Modelo:</label>
         <input type="text" id="modelo" name="modelo"><br>
