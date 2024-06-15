@@ -72,3 +72,11 @@ function listarModelosDisponibles($productos) {
     return $modelos;
 }
 
+// Función para calcular el valor total del inventario
+function calcularValorTotal($productos) {
+    $total = 0;
+    foreach ($productos as $producto) {
+        $total += $producto['valor'];
+    }
+    return $total;
+}
