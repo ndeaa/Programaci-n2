@@ -12,14 +12,15 @@ function agregarProducto($nombre, $cantidad, $valor, $modelo) {
     return $producto;
 }
 
-function buscarProductoPorModelo($productos, $modelo) {
+// Función para buscar un producto por modelo
+function buscarProducto($productos, $modelo) {
     foreach ($productos as $producto) {
-        if ($producto['modelo'] == $modelo) {
-            return "Nombre: " . $producto['modelo'] . "<br>";
+        if ($productos['modelo'] == $modelo) {
+            return "Producto encontrado - Nombre: " . $producto['producto'] . ", Cantidad: " . $producto['cantidad'] . ", Valor: " . $producto['precio'] . ", Modelo: " . $producto['modelo'] . "<br>";
         }
     }
     return "Producto no encontrado.<br>";
-}
+ }
 
 function mostrarProductos($productos) {
     $result = '';
@@ -47,3 +48,16 @@ function actualizarProducto( $productos, $nombre, $cantidad, $valor, $modelo) {
     }
     return $productos;
 }
+
+function calcularValorPromedio($productos) {
+    $total = 0;
+    foreach ($productos as $producto) {
+        $total += $producto['valor'];
+    }
+    if (count($productos) > 0) {
+        return $total / count($productos);
+    } else {
+        return 0;
+    }
+}
+
